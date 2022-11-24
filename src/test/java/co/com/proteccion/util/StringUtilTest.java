@@ -1,15 +1,12 @@
 package co.com.proteccion.util;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class StringUtilTest {
-    public static void main(String[] args) {
+    @Test
+    public void testRepeat(){
 
-        assertEquals(StringUtil.repeat("hola",3), "holaholahola");
-
-    }
-
-    private static void assertEquals(String actual, String expected) {
-        if(!actual.equals(expected)){
-            throw new RuntimeException("Actual is different to expected");
-        }
+        Assert.assertEquals("holaholahola", StringUtil.repeat("hola",3));
     }
 }
